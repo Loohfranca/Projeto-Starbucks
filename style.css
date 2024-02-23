@@ -1,0 +1,170 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+body {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.botao {
+    background-color: #017143;
+    /*cor de fundo*/
+    color: aliceblue;
+    border: none;
+    border-radius: 20px;
+    padding: 13px;
+    margin-top: 30px;
+    padding-right: 20px;
+    margin-left: 90px;
+}
+
+.tituloprincipal {
+    font-size: 60px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 90px;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 90px;
+}
+
+span {
+    color: #017143;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.imagemprincipal {
+    width: 80px;
+}
+
+.copaostarbucks {
+    width: 340px;
+    z-index: 2;
+}
+
+.copopequeno {
+    width: 60px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.copopequeno:hover {
+    transform: translateY(-35px);
+
+
+
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.texto {
+    width: 600px;
+}
+
+.imagem {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+
+.caixapequena {
+
+    display: flex;
+    justify-content: center;
+}
+
+.circulo {
+    background: #017143;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(700px at right 1000px);
+
+}
+
+.menu{
+font-size: 25px;
+font-family: 'Poppins', sans-serif;
+font-weight: 900;
+color: #017143;
+text-decoration: none
+
+}
+
+.container{
+    max-width:1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topo{
+    background-color: #017143;
+  padding: -3px;
+  width: 100%;
+  
+}
+.logo,.sociais{
+    width: 25%;
+}
+.menu{
+    width: 60%;
+}
+
+.cabe{
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+}
+.logo img{
+    width: 100px;
+}
+.socias button{
+    width: 40px;
+    height: 40px;
+    background-color:aliceblue;
+    padding-right: 30px;
+}
+.socias button i{
+font-size: 30px;
+
+}
+
+footer{
+    margin:auto;
+    color: #cac5c5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #017143;
+    padding: 10px;
+    width: 100%;
+    
+}
+    
