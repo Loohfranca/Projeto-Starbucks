@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  
+
 }
 
 body {
@@ -13,24 +13,81 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-.botao {
+header {
     background-color: #017143;
-    /*cor de fundo*/
-    color: aliceblue;
-    border: none;
-    border-radius: 20px;
-    padding: 13px;
-    margin-top: 30px;
-    padding-right: 20px;
-    margin-left: 90px;
-    font-size: 20px;
-    cursor: pointer;
-    
+    width: 100%;
+    padding: 10px;
 }
-.botao:hover{
-    opacity: 0.7;
-    
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo,
+.sociais {
+    width: 50%;
+}
+
+.menu {
+    width: 50%;
+}
+
+img {
+    width: 80px;
+}
+
+.menu nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+}
+
+.sociais button {
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(45deg, #5ef7b7, #d5f0e5);
+    border: none;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.sociais button:hover {
+    background-image: linear-gradient(45deg, #ecb1de, #d5f0e5);
+    transition: 0.8s;
+
+}
+
+.sociais button i {
+    font-size: 22px;
+    color: #026417;
+
+}
+
+.menu nav a::after {
+    content: " ";
+    width: 0px;
+    height: 4px;
+    background-image: linear-gradient(45deg, #1af097, #d5f0e5);
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+
+}
+
+.menu nav a:hover::after {
+    width: 30px;
+    transition: 0.3s;
+
 }
 
 .tituloprincipal {
@@ -42,7 +99,7 @@ body {
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 20px;
     margin-bottom: 30px;
     padding-right: 20px;
@@ -73,8 +130,6 @@ span {
 .copopequeno:hover {
     transform: translateY(-35px);
 
-
-
 }
 
 .conteudo {
@@ -102,71 +157,13 @@ span {
     justify-content: center;
 }
 
-.circulo {
-    background: #017143;
+
+.menu {
     width: 100%;
-    height: 100%;
-    top: 2;
-    left: 2;
-    clip-path: circle(600px at right 1100px);
-    position:absolute;
-    display: none;
-
 }
 
-.menu{
-font-size: 25px;
-font-family: 'Poppins', sans-serif;
-font-weight: 900;
-color: #017143;
-text-decoration: none
-
-
-}
-
-.container{
-    max-width:1000px;
+footer {
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.topo{
-    background-color: #017143;
-  padding: -3px;
-  width: 100%;
-  
-}
-.logo,.sociais{
-    width: 25%;
-}
-.menu{
-    width: 60%;
-}
-
-.cabe{
-    color: #ffffff;
-    text-decoration: none;
-    padding-right: 60px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 23px;
-}
-.logo img{
-    width: 100px;
-}
-.socias button{
-    width: 40px;
-    height: 40px;
-    background-color:aliceblue;
-    padding-right: 30px;
-}
-.socias button i{
-font-size: 30px;
-
-}
-
-footer{
-    margin:auto;
     color: #cac5c5;
     display: flex;
     align-items: center;
@@ -174,6 +171,77 @@ footer{
     background-color: #017143;
     padding: 10px;
     width: 100%;
-    
+
 }
-    
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000801;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-left: 90px;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #07e94b, #045e17, #ff00aa, #48ff00, #00ffd5, #002bff, #ff00ea, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000702
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #024423;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
