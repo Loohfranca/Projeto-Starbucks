@@ -11,12 +11,15 @@ body {
     padding-right: 0px;
     padding-left: 0px;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 header {
     background-color: #017143;
     width: 100%;
     padding: 10px;
+    flex-wrap: wrap;
+    
 }
 
 .container {
@@ -25,6 +28,7 @@ header {
     margin: 0 auto;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 
 .logo,
@@ -134,9 +138,13 @@ span {
 
 .conteudo {
     width: 100%;
-    display: flex;
+   
     justify-content: space-between;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
 
 }
 
@@ -244,4 +252,33 @@ footer {
     100% {
         background-position: 0 0;
     }
+}
+
+@media (max-width: 766px){
+
+    .menu nav a {
+        flex-direction: column;
+        display: block;
+        width: 100px;
+    }
+
+    .sociais{
+        flex-direction: column;
+        display: block;
+        width: 100px;
+    }
+
+    .tituloprincipal{
+        font-size: 40px;
+        
+    }
+span{
+    font-size: 50px;
+    color: #379e0e;
+}
+
+p{
+    font-size: 16px;
+}
+
 }
